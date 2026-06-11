@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yahia Ashraf | Software Engineer</title>
+    
+    <!-- استدعاء خطوط جوجل لتصميم احترافي -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* إعدادات عامة */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* خلفية سوداء مع تدرج دائري خفيف للعمق */
+            background-color: #050505;
+            background-image: radial-gradient(circle at center, #151515 0%, #000000 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            color: #ffffff;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        /* تنسيق الاسم */
+        .name {
+            font-size: 4.5rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            /* تأثير لوني معدني على الاسم */
+            background: linear-gradient(45deg, #ffffff, #777777);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeInDown 1.5s ease-out forwards;
+            opacity: 0;
+        }
+
+        /* تنسيق المسمى الوظيفي */
+        .title {
+            font-family: 'Fira Code', monospace; /* خط يشبه بيئة كتابة الأكواد */
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #8ab4f8; /* لون أزرق هادئ احترافي */
+            margin-bottom: 40px;
+            animation: fadeInUp 1.5s ease-out 0.5s forwards;
+            opacity: 0;
+        }
+
+        /* تنسيق كلمة Soon */
+        .soon-wrapper {
+            animation: fadeIn 2s ease-out 1s forwards;
+            opacity: 0;
+        }
+
+        .soon {
+            font-size: 1.2rem;
+            font-weight: 300;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            color: #555555;
+            position: relative;
+            display: inline-block;
+        }
+
+        /* تأثير النقطة المضيئة */
+        .soon::after {
+            content: '';
+            position: absolute;
+            right: -15px;
+            bottom: 5px;
+            width: 8px;
+            height: 8px;
+            background-color: #8ab4f8;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #8ab4f8;
+            animation: pulse 1.5s infinite;
+        }
+
+        /* الحركات (Animations) */
+        @keyframes fadeInDown {
+            0% { opacity: 0; transform: translateY(-30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.95); opacity: 0.5; }
+            50% { transform: scale(1.2); opacity: 1; }
+            100% { transform: scale(0.95); opacity: 0.5; }
+        }
+
+        /* لضبط المقاسات على شاشات الموبايل */
+        @media (max-width: 768px) {
+            .name { font-size: 2.8rem; }
+            .title { font-size: 1.1rem; }
+            .soon { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="name">Yahia Ashraf</h1>
+        <h2 class="title">&lt; Software Engineer /&gt;</h2>
+        <div class="soon-wrapper">
+            <p class="soon">Coming Soon</p>
+        </div>
+    </div>
+
+</body>
+</html>
